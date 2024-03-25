@@ -1,0 +1,22 @@
+{
+  "name": "mc3cierz-1.20.1",
+  "version": "0.0.1",
+  "scripts": {
+    "launcher": "node scripts/launcher.js",
+    "client:launch": "node scripts/client-launch.js",
+    "client:clear": "node scripts/client-clear.js --trash",
+    "client:reset": "node scripts/client-clear.js --trash --user",
+    "client:pure": "node scripts/client-clear.js --trash --user --world",
+    "server:clear": "node scripts/server-clear.js --trash",
+    "server:pure": "node scripts/server-clear.js --trash --world --mods",
+    "server:build": "node scripts/server-build.js",
+    "server:launch": "node scripts/server-gls.js && temp\\server-run.bat",
+    "forge:install": "node scripts/forge-install.js"
+  },
+  "author": "Adrian Gargula",
+  "license": "MIT",
+  "dependencies": {
+    "minecraft-launcher-core": "~3.18.1",
+    "shelljs": "~0.8.5"
+  }
+}

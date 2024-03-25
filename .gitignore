@@ -1,0 +1,40 @@
+# Node.js
+/node_modules
+
+# Minecraft Client
+/client/assets
+/client/crash-reports
+/client/libraries
+/client/local/ftbchunks/data
+/client/logs
+/client/mods
+/client/natives
+/client/schematics
+/client/shaderpacks/*.zip
+/client/usercache.json
+/client/usernamecache.json
+/client/.sl_password
+
+/client/resourcepacks/*
+!/client/resourcepacks/mc3cierz
+
+/client/versions/*/*
+!/client/versions/*/*.json
+
+/client/saves/*.zip
+/client/saves/world/*
+!/client/saves/world/icon.png
+!/client/saves/world/level.dat
+!/client/saves/world/datapacks
+!/client/saves/world/serverconfig
+
+# Minecraft Server
+/server/*
+!/server/eula.txt
+!/server/server.properties
+!/server/user_jvm_args.txt
+
+# Other
+/resources/*.jar
+/runtime
+/temp

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "RER",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "tag": "forge:plates"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "result": {
+    "item": "storagenetwork:kabel",
+    "count": 12
+  }
+}

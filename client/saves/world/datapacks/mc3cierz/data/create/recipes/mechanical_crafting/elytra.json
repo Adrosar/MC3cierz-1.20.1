@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "M": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "P": {
+      "item": "create:precision_mechanism"
+    }
+  },
+  "pattern": [
+    "SMPMS",
+    "SM MS",
+    "SM MS"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:elytra"
+  }
+}

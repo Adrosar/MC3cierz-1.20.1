@@ -1,0 +1,22 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "S": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "R": {
+      "item": "createaddition:iron_rod"
+    }
+  },
+  "pattern": [
+    "  RR",
+    "  SR",
+    " S  ",
+    "S   "
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:trident"
+  }
+}

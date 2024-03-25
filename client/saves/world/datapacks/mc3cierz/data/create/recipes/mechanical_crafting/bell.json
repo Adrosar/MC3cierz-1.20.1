@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "L": {
+      "tag": "minecraft:logs"
+    },
+    "G": {
+      "tag": "forge:ingots/gold"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "pattern": [
+    "LIL",
+    "GGG",
+    "G G"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:bell"
+  }
+}

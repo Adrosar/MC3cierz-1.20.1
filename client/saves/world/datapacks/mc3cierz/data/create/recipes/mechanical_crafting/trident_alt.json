@@ -1,0 +1,21 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "N": {
+      "item": "aquaculture:neptunium_ingot"
+    },
+    "R": {
+      "item": "createaddition:iron_rod"
+    }
+  },
+  "pattern": [
+    " RR",
+    " NR",
+    "N  "
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:trident"
+  }
+}

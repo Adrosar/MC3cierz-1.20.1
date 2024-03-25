@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "dkd",
+    "pcp",
+    "dkd"
+  ],
+  "key": {
+    "p": {
+      "item": "minecraft:ender_pearl"
+    },
+    "k": {
+      "item": "storagenetwork:kabel"
+    },
+    "d": {
+      "item": "minecraft:quartz"
+    },
+    "c": {
+      "tag": "forge:gems/diamond"
+    }
+  },
+  "result": {
+    "item": "storagenetwork:master"
+  }
+}

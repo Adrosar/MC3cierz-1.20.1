@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "D": {
+      "tag": "forge:gems/diamond"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "L": {
+      "tag": "forge:leather"
+    }
+  },
+  "pattern": [
+    "L C",
+    "DDD",
+    "D D"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:diamond_horse_armor"
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+        "H": {
+            "item": "minecraft:honeycomb"
+        },
+        "L": {
+            "tag": "forge:leather"
+        },
+        "C": {
+            "item": "minecraft:chain"
+        }
+    },
+    "pattern": [
+        " H ",
+        "LLL",
+        " C "
+    ],
+    "result": {
+        "item": "minecraft:saddle"
+    }
+}

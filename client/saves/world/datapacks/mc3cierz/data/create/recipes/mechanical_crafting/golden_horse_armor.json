@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "G": {
+      "tag": "forge:plates/gold"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "L": {
+      "tag": "forge:leather"
+    }
+  },
+  "pattern": [
+    "L C",
+    "GGG",
+    "G G"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:golden_horse_armor"
+  }
+}

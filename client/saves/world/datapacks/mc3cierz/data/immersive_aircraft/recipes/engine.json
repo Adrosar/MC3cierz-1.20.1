@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    "PFP",
+    "WIW"
+  ],
+  "key": {
+    "F": [
+      {
+        "item": "minecraft:blast_furnace"
+      }
+    ],
+    "M": [
+      {
+        "item": "create:precision_mechanism"
+      }
+    ],
+    "I": [
+      {
+        "item": "immersive_aircraft:boiler"
+      }
+    ],
+    "P": [
+      {
+        "item": "minecraft:piston"
+      }
+    ],
+    "W": [
+      {
+        "item": "create:cogwheel"
+      }
+    ]
+  },
+  "result": {
+    "item": "immersive_aircraft:engine"
+  }
+}

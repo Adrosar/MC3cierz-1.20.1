@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "I": {
+      "tag": "forge:plates/iron"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "L": {
+      "tag": "forge:leather"
+    }
+  },
+  "pattern": [
+    "L C",
+    "III",
+    "I I"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:iron_horse_armor"
+  }
+}

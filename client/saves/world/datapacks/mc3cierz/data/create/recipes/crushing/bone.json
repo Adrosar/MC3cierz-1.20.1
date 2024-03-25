@@ -1,0 +1,19 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:bone"
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "count": 4,
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "chance": 0.50,
+      "item": "create:experience_nugget"
+    }
+  ]
+}
