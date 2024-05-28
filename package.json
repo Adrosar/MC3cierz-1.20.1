@@ -1,6 +1,6 @@
 {
   "name": "mc3cierz-1.20.1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "launcher": "node scripts/launcher.js",
     "client:launch": "node scripts/client-launch.js",
