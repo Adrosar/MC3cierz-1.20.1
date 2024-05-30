@@ -54,9 +54,6 @@
   "jadeaddons": {
     "equipment_requirement": ""
   },
-  "twilightforest": {
-    "quest_ram_wool": true
-  },
   "jade": {
     "coordinates.rel": false,
     "distance": false,

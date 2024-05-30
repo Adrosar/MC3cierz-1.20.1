@@ -2,17 +2,18 @@
   "type": "create:mechanical_crafting",
   "acceptMirrored": false,
   "key": {
-    "N": {
-      "item": "aquaculture:neptunium_ingot"
+    "P": {
+      "item": "minecraft:prismarine_crystals"
     },
-    "R": {
+    "I": {
       "item": "createaddition:iron_rod"
     }
   },
   "pattern": [
-    " RR",
-    " NR",
-    "N  "
+    "  II",
+    "  PI",
+    " P  ",
+    "P   "
   ],
   "result": {
     "count": 1,

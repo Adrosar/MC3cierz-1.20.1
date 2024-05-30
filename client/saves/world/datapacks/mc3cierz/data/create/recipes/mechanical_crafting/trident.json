@@ -2,18 +2,18 @@
   "type": "create:mechanical_crafting",
   "acceptMirrored": false,
   "key": {
-    "S": {
+    "P": {
       "item": "minecraft:prismarine_shard"
     },
-    "R": {
+    "I": {
       "item": "createaddition:iron_rod"
     }
   },
   "pattern": [
-    "  RR",
-    "  SR",
-    " S  ",
-    "S   "
+    "  II",
+    "  PI",
+    " P  ",
+    "P   "
   ],
   "result": {
     "count": 1,
