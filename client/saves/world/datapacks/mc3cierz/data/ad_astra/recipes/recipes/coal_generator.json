@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "ad_astra_platform:iron_plates"
+    },
+    "F": {
+      "item": "minecraft:blast_furnace"
+    },
+    "C": {
+      "item": "createaddition:copper_spool"
+    }
+  },
+  "pattern": [
+    "#C#",
+    "#F#",
+    "#C#"
+  ],
+  "result": {
+    "item": "ad_astra:coal_generator"
+  }
+}
