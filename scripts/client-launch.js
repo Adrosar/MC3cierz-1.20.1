@@ -7,11 +7,12 @@ const mclc = require('minecraft-launcher-core');
 
 const ROOT = path.resolve(__dirname, '..');
 const CLIENT = path.resolve(ROOT, 'client');
-const JAVA = path.resolve(ROOT, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
+
 const FORGE = path.resolve(ROOT, 'resources/forge-1.20.1-47.2.0-installer.jar');
 const AUTH = path.resolve(os.homedir(), '.mc3cierz', 'tokens.json');
 const PASS = path.resolve(ROOT, 'client/.sl_password');
 const CACHE = path.resolve(ROOT, 'temp');
+const JAVA = getJava(ROOT);
 
 const color = {
     reset: "\x1b[0m",
@@ -22,6 +23,18 @@ const color = {
     fgMagenta: "\x1b[35m",
     fgCyan: "\x1b[36m",
     fgWhite: "\x1b[37m"
+}
+
+function getJava(_root) {
+    if (process.platform === "win32") {
+        return path.resolve(_root, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
+    }
+
+    if (process.platform === "linux") {
+        return path.resolve(_root, 'runtime/openjdk-jre-17.0.11+9-linux-x64/bin/java');
+    }
+
+    throw "Nieznany system operacyjny!";
 }
 
 function ensureFile(_done) {
@@ -225,4 +238,4 @@ function initClient() {
     });
 }
 
-setImmediate(initClient);
+initClient();

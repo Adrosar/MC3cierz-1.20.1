@@ -2,14 +2,30 @@ const path = require('path');
 const fs = require('fs');
 const shell = require('shelljs');
 
+function getRoot() {
+    return path.resolve(__dirname, '..');
+}
+
+function getJava(_root) {
+    if (process.platform === "win32") {
+        return path.resolve(_root, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
+    }
+
+    if (process.platform === "linux") {
+        return path.resolve(_root, 'runtime/openjdk-jre-17.0.11+9-linux-x64/bin/java');
+    }
+
+    throw "Nieznany system operacyjny!";
+}
+
 function generateLaunchScript() {
-    const ROOT = path.resolve(__dirname, '..');
+    const ROOT = getRoot();
     console.log("[ROOT]", ROOT);
 
     const SERVER = path.resolve(ROOT, 'server');
     console.log("[SERVER]", SERVER);
 
-    const JAVA = path.resolve(ROOT, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
+    const JAVA = getJava(ROOT);
     console.log("[JAVA]", JAVA);
 
     let fileName = 'temp/server-run';
