@@ -5,7 +5,7 @@ function R(..._path) {
     return path.resolve(__dirname, '..', ..._path);
 }
 
-function removeTrash() {
+function removeLogs() {
     shell.rm('-rf', R('client/*.log'));
     shell.rm('-rf', R('client/logs/*'));
     shell.rm('-rf', R('client/crash-reports/*'));
@@ -33,6 +33,7 @@ function removeWorld() {
     shell.mv('-f', R('temp/world/serverconfig'), R('client/saves/world'));
     shell.mv('-f', R('temp/world/level.dat'), R('client/saves/world'));
     shell.mv('-f', R('temp/world/icon.png'), R('client/saves/world'));
+    shell.rm('-rf', R('temp/world'));
 }
 
 function main() {
@@ -42,8 +43,8 @@ function main() {
         const key = args[i];
         const value = args[i + 1];
 
-        if (key === '--trash') {
-            removeTrash();
+        if (key === '--logs') {
+            removeLogs();
         }
 
         if (key === '--user') {

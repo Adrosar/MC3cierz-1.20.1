@@ -2,30 +2,20 @@ const path = require('path');
 const fs = require('fs');
 const shell = require('shelljs');
 
-function getRoot() {
-    return path.resolve(__dirname, '..');
-}
-
-function getJava(_root) {
-    if (process.platform === "win32") {
-        return path.resolve(_root, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
-    }
-
-    if (process.platform === "linux") {
-        return path.resolve(_root, 'runtime/openjdk-jre-17.0.11+9-linux-x64/bin/java');
-    }
-
-    throw "Nieznany system operacyjny!";
-}
-
 function generateLaunchScript() {
-    const ROOT = getRoot();
+    const ROOT = path.resolve(__dirname, '..');
     console.log("[ROOT]", ROOT);
 
     const SERVER = path.resolve(ROOT, 'server');
     console.log("[SERVER]", SERVER);
 
-    const JAVA = getJava(ROOT);
+    let JAVA = "";
+    if (process.platform === "win32") {
+        JAVA = path.resolve(ROOT, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
+    } else {
+        JAVA = path.resolve(ROOT, 'runtime/openjdk-jre-17.0.11+9-linux-x64/bin/java');
+    }
+
     console.log("[JAVA]", JAVA);
 
     let fileName = 'temp/server-run';
@@ -50,4 +40,4 @@ function generateLaunchScript() {
     fs.writeFileSync(path.resolve(ROOT, fileName), command);
 }
 
-setImmediate(generateLaunchScript);
+generateLaunchScript();

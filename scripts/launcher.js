@@ -58,6 +58,7 @@ function readVersion() {
 }
 
 function runClient() {
+  console.log(color.reset);
   console.clear();
   runScript("./client-launch.js");
 }
@@ -65,12 +66,12 @@ function runClient() {
 function clearClient(_mode) {
   if (_mode === 1) {
     printColor(color.fgCyan, "  └ Trwa usuwanie ...");
-    runScript("./client-clear.js", ["--trash"]);
+    runScript("./client-clear.js", ["--logs"]);
     printColor(color.fgCyan, "  └ Usunięto logi z klienta gry!");
     setTimeout(initHomepage, 2000);
   } else if (_mode === 2) {
     printColor(color.fgCyan, "  └ Trwa usuwanie ...");
-    runScript("./client-clear.js", ["--trash", "--user"]);
+    runScript("./client-clear.js", ["--logs", "--user"]);
     printColor(
       color.fgCyan,
       "  └ Usunięto logi i pliki tymczasowe z klienta gry!"
@@ -78,7 +79,7 @@ function clearClient(_mode) {
     setTimeout(initHomepage, 2000);
   } else if (_mode === 3) {
     printColor(color.fgCyan, "  └ Trwa usuwanie ...");
-    runScript("./client-clear.js", ["--trash", "--user", "--world"]);
+    runScript("./client-clear.js", ["--logs", "--user", "--world"]);
     printColor(
       color.fgCyan,
       "  └ Usunięto logi, pliki tymczasowe,\n    a główny świat 'world' przywrócono do stanu początkowego."
@@ -88,7 +89,10 @@ function clearClient(_mode) {
 }
 
 function buildServer() {
-  // ToDo ...
+  printColor(color.fgCyan, "  └ Trwa budowanie ...");
+  runScript("./server-build.js");
+  printColor(color.fgCyan, "  └ Server jest gotowy do uruchomienia");
+  setTimeout(initHomepage, 2000);
 }
 
 function closeLauncher() {
@@ -116,22 +120,49 @@ function closeLauncher() {
 }
 
 function runServer() {
-  // ToDo ...
+  console.log(color.reset);
+  console.clear();
+  runScript("./server-launch.js");
 }
 
-function clearServer() {
-  // ToDo ...
+function clearServer(_mode) {
+  if (_mode === 1) {
+    printColor(color.fgCyan, "  └ Trwa usuwanie ...");
+    runScript("./server-clear.js", ["--logs"]);
+    printColor(color.fgCyan, "  └ Usunięto logi z server'a gry!");
+    setTimeout(initHomepage, 2000);
+  } else if (_mode === 2) {
+    printColor(color.fgCyan, "  └ Trwa usuwanie ...");
+    runScript("./server-clear.js", ["--logs", "--world"]);
+    printColor(color.fgCyan, "  └ Usunięto logi i zapis świata z server'a gry!");
+    setTimeout(initHomepage, 2000);
+  } else if (_mode === 3) {
+    printColor(color.fgCyan, "  └ Trwa usuwanie ...");
+    runScript("./server-clear.js", ["--logs", "--world", "--mods"]);
+    printColor(color.fgCyan, "  └ Usunięto logi, zapis świata i wszystkie modyfikacje z server'a gry!");
+    setTimeout(initHomepage, 2000);
+  }
+}
+
+function clearTemp() {
+  printColor(color.fgCyan, "  └ Trwa czyszczenie folderu TEMP");
+  runScript("./launcher-clear.js");
+  printColor(color.fgCyan, "  └ Usunięto zawartość folderu TEMP");
+  setTimeout(initHomepage, 2000);
 }
 
 const optionsForHomepage = {
-  q: closeLauncher,
   l: runClient,
   c: clearClient.bind(null, 1),
   r: clearClient.bind(null, 2),
   p: clearClient.bind(null, 3),
   b: buildServer,
   s: runServer,
-  t: clearServer,
+  t: clearServer.bind(null, 1),
+  d: clearServer.bind(null, 2),
+  x: clearServer.bind(null, 3),
+  y: clearTemp,
+  q: closeLauncher,
 };
 
 function handleHomepage(_input) {
@@ -147,31 +178,35 @@ function drawHomepage() {
   console.clear();
   console.log(
     color.fgGreen +
-      "▬▬▬ MC3cierz (1.20.1) " +
-      readVersion() +
-      " ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+    "▬▬▬ MC3cierz (1.20.1) " +
+    readVersion() +
+    " ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
   );
   console.log();
   console.log("► CLIENT");
-  console.log(" [l] Uruchom grę Minecraft");
+  console.log(" [l] ▪ Uruchom grę Minecraft");
   console.log(" [c] └ Usuń logi");
   console.log(" [r] └ Usuń logi i dane użytkownika");
-  console.log(" [p] └ Usuń logi, dane użytkownika i zapisane stany");
+  console.log(" [p] └ Usuń logi, dane użytkownika i save-y");
   console.log();
   console.log("► SERVER");
-  console.log(" [b] Skopiuj modyfikacje wraz z konfiguracją do server'a");
-  console.log(" [s] └ Uruchom własny server pod adresem 127.0.0.1:25565");
-  console.log(" [t] └ Usuń logi i pliki tymczasowe");
+  console.log(" [b] ┌ Skopiuj modyfikacje wraz z konfiguracją do server'a");
+  console.log(" [s] ▪ Uruchom server pod adresem 127.0.0.1:25565");
+  console.log(" [t] └ Usuń logi");
   console.log(
-    " [d] └ Usuń logi, pliki tymczasowe, stany gry i modyfikacje wraz z konfiguracją"
+    " [d] └ Usuń logi, pliki CACHE i cały świat"
+  );
+  console.log(
+    " [x] └ Usuń logi, pliki CACHE, cały świat i wszystkie modyfikacje"
   );
   console.log();
   console.log("► LAUNCHER");
-  console.log(" [q] Wyjdź");
+  console.log(" [y] ▪ Wyczyść folder TEMP");
+  console.log(" [q] ▪ Wyjdź z launcher'a");
   console.log();
   console.log(
     "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬" +
-      color.reset
+    color.reset
   );
 }
 

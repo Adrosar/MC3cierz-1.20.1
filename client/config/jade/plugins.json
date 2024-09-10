@@ -73,6 +73,9 @@
     "goggles.detailed": false,
     "placard": true
   },
+  "lootr": {
+    "info": true
+  },
   "corpse": {
     "corpse": true
   }

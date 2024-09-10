@@ -1,5 +1,5 @@
 :: Windows (CR LF) OEM 852
-
+MODE 85,25
 @ECHO OFF
 
 SET WORKDIR=%~dp0
