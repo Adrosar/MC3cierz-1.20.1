@@ -5,7 +5,7 @@ function install() {
     const ROOT = path.resolve(__dirname, '..');
     console.log("[path] ROOT:", ROOT);
 
-    const JAVA = path.resolve(ROOT, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
+    const JAVA = path.resolve(ROOT, 'runtime/openjdk-jre-17.0.12+7-windows-x64/bin/java.exe');
     console.log("[path] JAVA:", JAVA);
 
     const FORGE = path.resolve(ROOT, 'resources/forge-1.20.1-47.2.0-installer.jar');

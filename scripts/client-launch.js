@@ -27,11 +27,11 @@ const color = {
 
 function getJava(_root) {
     if (process.platform === "win32") {
-        return path.resolve(_root, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
+        return path.resolve(_root, 'runtime/openjdk-jre-17.0.12+7-windows-x64/bin/java.exe');
     }
 
     if (process.platform === "linux") {
-        return path.resolve(_root, 'runtime/openjdk-jre-17.0.11+9-linux-x64/bin/java');
+        return path.resolve(_root, 'runtime/openjdk-jre-17.0.12+7-linux-x64/bin/java');
     }
 
     throw "Nieznany system operacyjny!";

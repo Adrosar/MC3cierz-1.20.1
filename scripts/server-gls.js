@@ -11,9 +11,9 @@ function generateLaunchScript() {
 
     let JAVA = "";
     if (process.platform === "win32") {
-        JAVA = path.resolve(ROOT, 'runtime/openjdk-17.0.8.1-win-x64/bin/java.exe');
+        JAVA = path.resolve(ROOT, 'runtime/openjdk-jre-17.0.12+7-windows-x64/bin/java.exe');
     } else {
-        JAVA = path.resolve(ROOT, 'runtime/openjdk-jre-17.0.11+9-linux-x64/bin/java');
+        JAVA = path.resolve(ROOT, 'runtime/openjdk-jre-17.0.12+7-linux-x64/bin/java');
     }
 
     console.log("[JAVA]", JAVA);
