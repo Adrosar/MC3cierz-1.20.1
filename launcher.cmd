@@ -9,4 +9,4 @@ SET "TEMP=%WORKDIR%temp"
 SET "TMP=%WORKDIR%temp"
 
 ECHO ùadowanie ... prosz© czekaÜ
-"%WORKDIR%runtime\node-v20.11.1-win-x64\node.exe" "%WORKDIR%scripts\launcher.js"
+"%WORKDIR%runtime\node-v20.11.1-win-x64\node.exe" "%WORKDIR%scripts\launcher-start.js"

@@ -28,7 +28,13 @@ enableHyperEnchant = true
 enchantByBlazeEnchanterCostCoefficient = 1.0
 #.
 #Range: 0.009999999776482582 ~ 100.0
+hyperEnchantByBlazeEnchanterCostCoefficient = 1.0
+#.
+#Range: 0.009999999776482582 ~ 100.0
 copyEnchantedBookCostCoefficient = 1.0
+#.
+#Range: 0.009999999776482582 ~ 100.0
+copyEnchantedBookWithHyperExperienceCostCoefficient = 1.0
 #.
 #The amount of ink needed to be consumed by Copying one page of Written Book
 #Range: 1 ~ 100
@@ -56,10 +62,4 @@ crushingWheelDropExpScale = 0.3400000035762787
 #.
 #Whether or not copying a written book always get original version. Setting it to false let you always get copy version of the book.
 copyingWrittenBookAlwaysGetOriginalVersion = true
-#.
-#Range: 0.009999999776482582 ~ 100.0
-hyperEnchantByBlazeEnchanterCostCoefficient = 1.0
-#.
-#Range: 0.009999999776482582 ~ 100.0
-copyEnchantedBookWithHyperExperienceCostCoefficient = 1.0
 

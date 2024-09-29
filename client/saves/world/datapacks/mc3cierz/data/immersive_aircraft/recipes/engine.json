@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " M ",
-    "PFP",
-    "WIW"
+    "SSS",
+    "CMC",
+    "PIP"
   ],
   "key": {
-    "F": [
-      {
-        "item": "minecraft:blast_furnace"
-      }
-    ],
     "M": [
       {
         "item": "create:precision_mechanism"
+      }
+    ],
+    "S": [
+      {
+        "item": "create:sturdy_sheet"
       }
     ],
     "I": [
@@ -21,14 +21,14 @@
         "item": "immersive_aircraft:boiler"
       }
     ],
-    "P": [
-      {
-        "item": "minecraft:piston"
-      }
-    ],
-    "W": [
+    "C": [
       {
         "item": "create:cogwheel"
+      }
+    ],
+    "P": [
+      {
+        "item": "createdieselgenerators:engine_piston"
       }
     ]
   },

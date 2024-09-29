@@ -37,7 +37,7 @@ function run() {
     const JAVA = getJava(ROOT);
     console.log("[JAVA]", JAVA);
 
-    const command = `cd "${SERVER}" && "${JAVA}" @user_jvm_args.txt @libraries/net/minecraftforge/forge/1.20.1-47.2.0/${getArgsFile()} nogui`;
+    const command = `cd "${SERVER}" && "${JAVA}" @user_jvm_args.txt @libraries/net/minecraftforge/forge/1.20.1-47.3.10/${getArgsFile()} nogui`;
 
     console.log("");
     console.log("[CMD]", command);

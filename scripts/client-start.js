@@ -8,7 +8,7 @@ const mclc = require('minecraft-launcher-core');
 const ROOT = path.resolve(__dirname, '..');
 const CLIENT = path.resolve(ROOT, 'client');
 
-const FORGE = path.resolve(ROOT, 'resources/forge-1.20.1-47.2.0-installer.jar');
+const FORGE = path.resolve(ROOT, 'resources/forge-1.20.1-47.3.10-installer.jar');
 const AUTH = path.resolve(os.homedir(), '.mc3cierz', 'tokens.json');
 const PASS = path.resolve(ROOT, 'client/.sl_password');
 const CACHE = path.resolve(ROOT, 'temp');
@@ -157,12 +157,12 @@ function readUserName(_done) {
 function runClient(_userName) {
     console.clear();
     console.log(color.fgCyan);
-    console.log("[client] User:", _userName);
-    console.log("[path] ROOT:", ROOT);
-    console.log("[path] CLIENT:", CLIENT);
-    console.log("[path] JAVA:", JAVA);
-    console.log("[path] FORGE:", FORGE);
-    console.log("[path] CACHE:", CACHE);
+    console.log("User:", _userName);
+    console.log("ROOT:", ROOT);
+    console.log("CLIENT:", CLIENT);
+    console.log("JAVA:", JAVA);
+    console.log("FORGE:", FORGE);
+    console.log("CACHE:", CACHE);
     console.log(color.reset);
 
     const client = new mclc.Client();

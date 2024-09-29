@@ -11,5 +11,5 @@ export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export __VK_LAYER_NV_optimus=NVIDIA_only
 
 echo Proszę czekać. Trwa ładowanie ...
-"$WORKDIR/runtime/node-v20.14.0-linux-x64/bin/node" "$WORKDIR/scripts/launcher.js"
+"$WORKDIR/runtime/node-v20.14.0-linux-x64/bin/node" "$WORKDIR/scripts/launcher-start.js"
 

@@ -20,7 +20,7 @@ function generateLaunchScript() {
 
     let fileName = 'temp/server-run';
     let command = `cd "${SERVER}" && "${JAVA}" @user_jvm_args.txt `;
-    command += `@libraries/net/minecraftforge/forge/1.20.1-47.2.0/`;
+    command += `@libraries/net/minecraftforge/forge/1.20.1-47.3.10/`;
 
     if (process.platform === 'win32') {
         fileName += `.bat`;

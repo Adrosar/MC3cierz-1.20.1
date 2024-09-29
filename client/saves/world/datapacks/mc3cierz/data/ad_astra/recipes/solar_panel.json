@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "ad_astra:desh_plates"
+    },
+    "F": {
+      "item": "create_optical:polarizing_filter"
+    },
+    "P": {
+      "item": "ad_astra:photovoltaic_etrium_cell"
+    },
+    "S": {
+      "tag": "ad_astra:steel_plates"
+    }
+  },
+  "pattern": [
+    "FFF",
+    "PPP",
+    "S#S"
+  ],
+  "result": {
+    "item": "ad_astra:solar_panel"
+  },
+  "show_notification": true
+}

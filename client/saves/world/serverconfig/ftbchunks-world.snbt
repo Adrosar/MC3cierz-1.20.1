@@ -10,7 +10,7 @@
 	
 	# Dimension ID's where chunks may be claimed. If non-empty, chunks may be claimed *only* in these dimensions (and the dimension is not in "claim_dimension_blacklist"). Same syntax as for "claim_dimension_blacklist".
 	# Default: []
-	claim_dimension_whitelist: ["minecraft:overworld"]
+	claim_dimension_whitelist: [ ]
 	
 	# Disables all land protection. Useful for private servers where everyone is trusted and claims are only used for force-loading
 	# Default: false
@@ -37,12 +37,12 @@
 	# Hard limit for the number of chunks a team can claim, regardless of how many members. Default of 0 means no hard limit.
 	# Default: 0
 	# Range: 0 ~ 2147483647
-	hard_team_claim_limit: 1000
+	hard_team_claim_limit: 0
 	
 	# Hard limit for the number of chunks a team can force-load, regardless of how many members. Default of 0 means no hard limit.
 	# Default: 0
 	# Range: 0 ~ 2147483647
-	hard_team_force_limit: 100
+	hard_team_force_limit: 0
 	
 	# If true, "Location Visibility" team settings are ignored, and all players can see each other anywhere on the map.
 	# Default: false
@@ -53,33 +53,33 @@
 	# Setting this to 0 disables long-range tracking.
 	# Default: 20
 	# Range: 0 ~ 2147483647
-	long_range_tracker_interval: 40
+	long_range_tracker_interval: 20
 	
 	# Max claimed chunks.
 	# You can override this with FTB Ranks 'ftbchunks.max_claimed' permission
 	# Default: 500
 	# Range: -∞ ~ +∞
-	max_claimed_chunks: 1000
+	max_claimed_chunks: 500
 	
 	# Max force loaded chunks.
 	# You can override this with FTB Ranks 'ftbchunks.max_force_loaded' permission
 	# Default: 25
 	# Range: -∞ ~ +∞
-	max_force_loaded_chunks: 100
+	max_force_loaded_chunks: 25
 	
 	# Maximum time (in real-world days) where if no player in a team logs in, the team automatically loses their claims.
 	# Prevents chunks being claimed indefinitely by teams who no longer play.
 	# Default of 0 means no automatic loss of claims.
 	# Default: 0.0
 	# Range: 0.0 ~ 3650.0
-	max_idle_days_before_unclaim: 30.0d
+	max_idle_days_before_unclaim: 0.0d
 	
 	# Maximum time (in real-world days) where if no player in a team logs in, any forceloaded chunks owned by the team are no longer forceloaded.
 	# Prevents chunks being forceloaded indefinitely by teams who no longer play.
 	# Default of 0 means no automatic loss of forceloading.
 	# Default: 0.0
 	# Range: 0.0 ~ 3650.0
-	max_idle_days_before_unforce: 10.0d
+	max_idle_days_before_unforce: 0.0d
 	
 	# Maximum time in days to keep logs of prevented fakeplayer access to a team's claims.
 	# Default: 7

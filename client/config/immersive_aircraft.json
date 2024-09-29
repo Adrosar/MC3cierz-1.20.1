@@ -17,19 +17,24 @@
   "windRainWeather": 3.0,
   "windThunderWeather": 3.0,
   "repairSpeed": 0.025,
+  "repairExhaustion": 0.5,
   "collisionDamage": true,
   "burnFuelInCreative": false,
   "acceptVanillaFuel": true,
   "useCustomKeybindSystem": true,
   "showHotbarEngineGauge": true,
   "weaponsAreDestructive": false,
+  "dropInventory": true,
+  "dropUpgrades": false,
+  "regenerateHealthEveryNTicks": 0,
+  "requireShiftForRepair": false,
   "fuelList": {
     "minecraft:blaze_powder": 1200
   },
   "validDimensions": {
-    "minecraft:the_nether": true,
     "minecraft:overworld": true,
-    "minecraft:the_end": true
+    "minecraft:the_end": true,
+    "minecraft:the_nether": true
   },
   "gunpowderAmmunition": {
     "minecraft:gunpowder": 100
@@ -42,5 +47,6 @@
   "bombBayAmmunition": {
     "minecraft:tnt": 100
   },
-  "version": 1
+  "version": 1,
+  "name": "immersive_aircraft"
 }

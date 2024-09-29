@@ -60,7 +60,7 @@ function readVersion() {
 function runClient() {
   console.log(color.reset);
   console.clear();
-  runScript("./client-launch.js");
+  runScript("./client-start.js");
 }
 
 function clearClient(_mode) {
@@ -122,7 +122,7 @@ function closeLauncher() {
 function runServer() {
   console.log(color.reset);
   console.clear();
-  runScript("./server-launch.js");
+  runScript("./server-start.js");
 }
 
 function clearServer(_mode) {
