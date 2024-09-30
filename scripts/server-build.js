@@ -5,20 +5,17 @@ function resolvePath(..._path) {
   return path.resolve(__dirname, "..", ..._path);
 }
 
-function build() {
+function main() {
   shell.cp("-rf", resolvePath("client/mods"), resolvePath("server"));
-  shell.rm("-rf", resolvePath("server/mods/entityculling*"));
-  shell.rm("-rf", resolvePath("server/mods/dynamiclightsreforged*"));
-  shell.rm("-rf", resolvePath("server/mods/FpsReducer*"));
-  shell.rm("-rf", resolvePath("server/mods/smoothboot*"));
-  shell.rm("-rf", resolvePath("server/mods/textrues_embeddium_options*"));
+  shell.rm("-rf", resolvePath("server/mods/sodium*"));
+  shell.rm("-rf", resolvePath("server/mods/starlight*"));
+  shell.rm("-rf", resolvePath("server/mods/embeddium*"));
 
   shell.cp("-rf", resolvePath("client/config"), resolvePath("server"));
-  shell.rm("-rf", resolvePath("server/config/entityculling*"));
-  shell.rm("-rf", resolvePath("server/config/dynamiclightsreforged*"));
-  shell.rm("-rf", resolvePath("server/config/FpsReducer*"));
-  shell.rm("-rf", resolvePath("server/config/smoothboot*"));
-  shell.rm("-rf", resolvePath("server/config/textrues_embeddium_options*"));
+  shell.rm("-rf", resolvePath("server/config/sodium*"));
+  shell.rm("-rf", resolvePath("server/config/starlight*"));
+  shell.rm("-rf", resolvePath("server/config/embeddium*"));
+
 
   shell.mkdir("-p", resolvePath("server/world"));
   shell.cp(
@@ -33,4 +30,4 @@ function build() {
   );
 }
 
-setImmediate(build);
+main()
