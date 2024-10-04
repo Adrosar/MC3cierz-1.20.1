@@ -35,7 +35,7 @@
 		#Normal oil chunks oil amount multiplier
 		"Normal oil chunks oil amount multiplier" = 3.0
 		#High oil chunks oil amount multiplier
-		"High oil chunks oil amount multiplier" = 4.0
+		"High oil chunks oil amount multiplier" = 3.0
 		#Max Oil Scanner Level
 		"Max Oil Scanner Level" = 10000
 		#Normal oil chunks percentage
