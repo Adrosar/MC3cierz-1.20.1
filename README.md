@@ -19,10 +19,11 @@ Paczka _client + server_ oparta o **Minecraft 1.20.1** oraz **Forge 47.2.0**
 
 ### Forge 47.3.10
 
-Paczka _client + server_ oparta o **Minecraft 1.20.1** oraz **Forge 47.3.10**
+Paczka _client + server_ oparta o **Minecraft 1.20.1** oraz **Forge 47.3.10**.
 
-| System                         | Wersja | Link                                                         | Hasło |
-| ------------------------------ | ------ | ------------------------------------------------------------ | ----- |
-| Windows 10 x64 & Fedora 40 x64 | ...    | [Mega](https://mega.nz/folder/0dlEHQxD#XlV8UWwhdrhRl9CNyrREvg) | ...   |
+Od teraz paczki będą wersjonowane wedle **CalVer**, a nie **SemVer** jak to miało miejsce wcześniej.
 
+| System                         | Wersja     | Link                                                         | Hasło |
+| ------------------------------ | ---------- | ------------------------------------------------------------ | ----- |
+| Windows 10 x64 & Fedora 40 x64 | 2024.10.04 | [Mega](https://mega.nz/folder/0dlEHQxD#XlV8UWwhdrhRl9CNyrREvg) | ...   |
 
