@@ -33,6 +33,7 @@
 !/server/eula.txt
 !/server/server.properties
 !/server/user_jvm_args.txt
+!/server/server-icon.png
 
 # Other
 /resources/*.jar
