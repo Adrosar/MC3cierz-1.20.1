@@ -1,0 +1,51 @@
+<html>
+
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC3cierz Client</title>
+    <HTA:APPLICATION SINGLEINSTANCE="yes" INNERBORDER="no" SYSMENU="yes" SCROLL="no" MAXIMIZEBUTTON="no">
+    </HTA:APPLICATION>
+    <style type="text/css">
+        html,
+        body {
+            margin: 5%;
+            padding: 0;
+            border: none;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</HEAD>
+
+<body>
+    <button onclick="runMinecraft()">Uruchom Minecraft'a</button>
+    <h2>Po uruchomieniu terminala "node.exe" można zamknąć TO okno jeżeli samo nie zniknie.</h2>
+    <script type="text/javascript" language="javascript">
+        window.resizeTo(400, 200);
+
+        function runMinecraft() {
+            var shell = new ActiveXObject("WScript.Shell");
+            var dir = shell.CurrentDirectory;
+
+            shell.Environment("Process").Item("WORKDIR") = dir;
+            shell.Environment("Process").Item("APPDATA") = dir;
+            shell.Environment("Process").Item("BINDIR") = dir;
+            shell.Environment("Process").Item("TEMP") = dir + '\\temp';
+            shell.Environment("Process").Item("TMP") = dir + '\\temp';
+
+            var node = dir + "\\runtime\\node-v20.11.1-win-x64\\node.exe";
+            var js = dir + "\\scripts\\client-start.js";
+            var full = '"' + node + '" "' + js + '"';
+
+            shell.Run(full);
+            setTimeout(function () {
+                window.close();
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
