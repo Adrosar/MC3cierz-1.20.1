@@ -34,6 +34,11 @@ function getJava(_root) {
         return path.resolve(_root, 'runtime/openjdk-jre-17.0.12+7-linux-x64/bin/java');
     }
 
+    if (process.platform === "darwin") {
+        return path.resolve(_root, 'runtime/openjdk-jre-17.0.13-macosx-aarch64/Contents/Home/bin/java');
+        // Apple M1 Pro (MacOS Sonoma 14.2.1) .................................................. ↑
+    }
+
     throw "Nieznany system operacyjny!";
 }
 
