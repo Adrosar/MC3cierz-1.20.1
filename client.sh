@@ -8,4 +8,3 @@ export TMP=$TEMP
 
 echo Proszę czekać. Trwa ładowanie ...
 "$WORKDIR/runtime/node-v20.14.0-linux-x64/bin/node" "$WORKDIR/scripts/client-start.js"
-
