@@ -26,8 +26,8 @@ Od teraz paczki będą wersjonowane wedle **CalVer**, a nie **SemVer** jak to mi
 | System                                                       | Wersja                        | Link                                                         | Hasło                            |
 | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ | -------------------------------- |
 | Windows 10 x64 & Fedora 40 x64                               | 2024.10.08                    | ↓                                                            | VJ6bhXa@3zEJY#AsXx8$VZJjx%rYm5a3 |
-| Windows 10 x64 & Fedora 40 x64 & MasOS Sonoma (Apple Silicon M1) | 2025.01.18 (najnowsza wersja) | [Mega](https://mega.nz/folder/0dlEHQxD#XlV8UWwhdrhRl9CNyrREvg) | C8qPAcb4#vuu3rzX!zbxGTM@4X3IUe$q |
-| Windows & Bazzite & MasOS                                    | ...                           | ...                                                          | ...                              |
+| Windows 10 x64 & Fedora 40 x64 & MacOS Sonoma (Apple Silicon M1) | 2025.01.18                    | ↓                                                            | C8qPAcb4#vuu3rzX!zbxGTM@4X3IUe$q |
+| Windows 10 x64 & Fedora 42 x64 & MacOS Sonoma (Apple Silicon M1) | 2025.06.27 (najnowsza wersja) | [Mega](https://mega.nz/folder/0dlEHQxD#XlV8UWwhdrhRl9CNyrREvg) | xa79ciGKwDYGao$qxXQ6GhjAeA8y4&Vj |
 
 
 
